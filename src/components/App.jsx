@@ -5,17 +5,15 @@ import AppBar from './AppBar';
 import { Container, Title, Heading2 } from './App.styled';
 
 function App() {
-  return (
-    <>
-      <AppBar />
+  return (    
       <Container>
+        <AppBar />
         <Title>Phonebook📱</Title>
         <ContactForm />
         <Heading2>Contacts</Heading2>
         <Filter />
         <ContactList />
-      </Container>
-    </>
+      </Container>    
   );
 }
 
