@@ -17,10 +17,10 @@ export default function AuthNav() {
   return (
     <div>
       <div to="" exact style={styles.link} activeStyle={styles.activeLink}>
-        Регистрация
+        Registration
       </div>
       <div to="" exact style={styles.link} activeStyle={styles.activeLink}>
-        Логин
+        Login
       </div>
     </div>
   );

@@ -16,7 +16,7 @@ const styles = {
 const Navigation = () => (
   <nav>
     <div to="" exact style={styles.link} activeStyle={styles.activeLink}>
-      Главная
+      Home
     </div>
 
     <div to="" exact style={styles.link} activeStyle={styles.activeLink}>
