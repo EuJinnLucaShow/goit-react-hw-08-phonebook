@@ -6,7 +6,7 @@ export const Container = styled.div`
 `;
 export const Avatar = styled.img`
   margin-right: 4px;
-  width: 32px;
+  width: 40px;
 `;
 
 export const Name = styled.span`
