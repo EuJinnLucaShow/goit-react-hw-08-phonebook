@@ -1,18 +1,17 @@
 import styled from 'styled-components';
 
-export const ContactItems = styled.li`
+export const Container = styled.div`
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  margin-bottom: 10px;
+`;
+export const Avatar = styled.img`
+  margin-right: 4px;
+  width: 32px;
 `;
 
-export const ContactName = styled.span`
-  margin-right: 10px;
-`;
-
-export const ContactNumber = styled.span`
-  /* margin-right: 20px; */
+export const Name = styled.span`
+  font-weight: 700;
+  margin-right: 12px;
 `;
 
 export const Button = styled.button`
@@ -21,14 +20,13 @@ export const Button = styled.button`
     height: 22px;
   }
   padding: 3px 10px 0 10px;
-  margin-left: 20px;
   font-size: 14px;
   border-radius: 6px;
   border: 1px solid;
   :hover {
     background-color: #e0e0e0;
     > svg {
-      fill: #f50505;
+      fill: #1f07f2;
     }
   }
 `;
