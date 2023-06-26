@@ -3,8 +3,10 @@ import { Links } from './Navigation.styled';
 
 const Navigation = () => (
   <nav>
-    <Links to="">Home</Links>
-    <Links to="">Phonebook</Links>
+    <Links to="/" end>
+      Home
+    </Links>
+    <Links to="/phonebook">Phonebook</Links>
   </nav>
 );
 
