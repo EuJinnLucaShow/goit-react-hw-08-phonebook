@@ -1,5 +1,5 @@
+import { BiSolidEditAlt } from 'react-icons/bi';
 import {
-  FcEditImage,
   FcBusinessContact,
   FcCellPhone,
   FcConferenceCall,
@@ -24,7 +24,7 @@ const Home = () => (
   <div style={styles.container}>
     <h1 style={styles.title}>Home page of the Phonebook</h1>
     <p>
-      <FcEditImage size="75" />
+      <BiSolidEditAlt size="75" fill="#56abd1" />
       <FcCellPhone size="75" />
       <FcConferenceCall size="75" />
       <FcBusinessContact size="75" />
