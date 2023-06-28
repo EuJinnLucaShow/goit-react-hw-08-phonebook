@@ -14,24 +14,7 @@ const RegisterForm = () => {
       email.value.trim() === '' ||
       password.value.trim() === ''
     ) {
-      return toast.error('Please fill in all fields', {
-        duration: 4000,
-        position: 'top-center',
-
-        // Styling
-        style: {
-          color: '#fa0000',
-        },
-
-        // Custom Icon
-        icon: '🤬',
-
-        // Aria
-        ariaProps: {
-          role: 'status',
-          'aria-live': 'polite',
-        },
-      });
+      return toast.error('Please fill in all fields');
     }
     dispatch(
       register({
