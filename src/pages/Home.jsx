@@ -1,5 +1,3 @@
-import React from 'react';
-
 const styles = {
   container: {
     minHeight: 'calc(50vh - 50px)',
