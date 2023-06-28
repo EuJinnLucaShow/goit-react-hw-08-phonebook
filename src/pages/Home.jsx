@@ -1,9 +1,17 @@
+import {
+  FcEditImage,
+  FcBusinessContact,
+  FcCellPhone,
+  FcConferenceCall,
+} from 'react-icons/fc';
+
 const styles = {
   container: {
     minHeight: 'calc(50vh - 50px)',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
+    flexDirection: 'column',
   },
   title: {
     fontWeight: 700,
@@ -15,6 +23,12 @@ const styles = {
 const Home = () => (
   <div style={styles.container}>
     <h1 style={styles.title}>Home page of the Phonebook</h1>
+    <p>
+      <FcEditImage size="75" />
+      <FcCellPhone size="75" />
+      <FcConferenceCall size="75" />
+      <FcBusinessContact size="75" />
+    </p>
   </div>
 );
 
