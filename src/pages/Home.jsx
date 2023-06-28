@@ -12,10 +12,10 @@ const styles = {
   },
 };
 
-const HomeView = () => (
+const Home = () => (
   <div style={styles.container}>
     <h1 style={styles.title}>Home page of the Phonebook</h1>
   </div>
 );
 
-export default HomeView;
+export default Home;

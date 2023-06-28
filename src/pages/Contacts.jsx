@@ -13,7 +13,6 @@ function Contacts() {
           <title>Phonebook📱</title>
         </Helmet>
         <ContactForm />
-
         <Heading2>Contacts</Heading2>
         <Filter />
         <ContactList />
