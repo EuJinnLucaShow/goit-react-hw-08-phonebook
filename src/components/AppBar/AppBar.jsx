@@ -4,13 +4,19 @@ import AuthNav from '../AuthNav/AuthNav';
 import { Header } from './AppBar.styled';
 import { useAuth } from '../hooks';
 
-export const AppBar = () => {
+const AppBar = () => {
   const { isLoggedIn } = useAuth();
+
+  const renderNavigation = () => {
+    return isLoggedIn ? <UserMenu /> : <AuthNav />;
+  };
 
   return (
     <Header>
       <Navigation />
-      {isLoggedIn ? <UserMenu /> : <AuthNav />}
+      {renderNavigation()}
     </Header>
   );
 };
+
+export default AppBar;

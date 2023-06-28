@@ -1,6 +1,7 @@
 import { useDispatch } from 'react-redux';
-import { register } from 'redux/auth/auth-operations';
 import toast from 'react-hot-toast';
+
+import { register } from 'redux/auth/auth-operations';
 import { Form, Input, Text, Button } from './RegisterForm.styled';
 
 const RegisterForm = () => {

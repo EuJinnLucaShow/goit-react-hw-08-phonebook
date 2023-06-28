@@ -1,4 +1,3 @@
-import React from 'react';
 import { Links } from './AuthNav.styled';
 
 export default function AuthNav() {
