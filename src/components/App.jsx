@@ -17,15 +17,14 @@ const ContactsPage = lazy(() => import('../pages/Contacts'));
 
 function App() {
   const dispatch = useDispatch();
-
   const { isRefreshing } = useAuth();
 
   useEffect(() => {
     dispatch(refreshUser());
   }, [dispatch]);
 
-  return isRefreshing ? (
-    <Loader />
+  return isRefreshing ? ( // if isRefreshing is true, then render Loader, else render Container
+    <Loader /> // Loader - spinner
   ) : (
     <Container>
       <Routes>
