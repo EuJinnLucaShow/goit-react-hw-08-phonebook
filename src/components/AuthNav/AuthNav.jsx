@@ -1,11 +1,11 @@
 import React from 'react';
-import { StylesLink } from './AuthNav.styled';
+import { Links } from './AuthNav.styled';
 
 export default function AuthNav() {
   return (
     <div>
-      <StylesLink to="/registration">Registration</StylesLink>
-      <StylesLink to="/login">Login</StylesLink>
+      <Links to="/registration">Registration</Links>
+      <Links to="/login">Login</Links>
     </div>
   );
 }
