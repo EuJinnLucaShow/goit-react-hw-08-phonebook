@@ -26,7 +26,7 @@ export const Button = styled.button`
   :hover {
     background-color: #e0e0e0;
     > svg {
-      fill: #1f07f2;
+      fill: #ff8c00;
     }
   }
 `;

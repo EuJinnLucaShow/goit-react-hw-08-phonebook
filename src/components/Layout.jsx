@@ -19,7 +19,7 @@ export const Layout = () => {
           icon: '🤬',
           // Styling
           style: {
-            color: '#fa0000',
+            color: '#000000',
           },
         }}
       />
