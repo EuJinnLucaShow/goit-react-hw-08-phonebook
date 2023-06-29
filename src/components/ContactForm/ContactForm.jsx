@@ -82,7 +82,7 @@ const ContactForm = () => {
         value={number}
         onChange={handleNumberChange}
         pattern="(\+?( |-|\.)?\d{1,2}( |-|\.)?)?(\(?\d{3}\)?|\d{3})( |-|\.)?(\d{3}( |-|\.)?\d{4})"
-        title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
+        title="Phone number format could be: +1 555 1234567 or 555 1234567."
         required
       />
 

@@ -24,7 +24,7 @@ const Home = () => (
   <div style={styles.container}>
     <h1 style={styles.title}>Home page of the Phonebook</h1>
     <p>
-      <BiSolidEditAlt size="75" fill="#56abd1" />
+      <BiSolidEditAlt size="75" fill="#2b35c2" />
       <FcCellPhone size="75" />
       <FcConferenceCall size="75" />
       <FcBusinessContact size="75" />
