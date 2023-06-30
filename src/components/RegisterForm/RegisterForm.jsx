@@ -1,41 +1,131 @@
 import { useDispatch } from 'react-redux';
-import toast from 'react-hot-toast';
 
 import { register } from 'redux/auth/auth-operations';
-import { Form, Input, Text, Button } from './RegisterForm.styled';
+import { Button, Form, Input } from 'antd';
 
 const RegisterForm = () => {
+  const [form] = Form.useForm();
   const dispatch = useDispatch();
 
-  const handleSubmit = e => {
-    e.preventDefault();
-    const { name, email, password } = e.target.elements;
-    if (
-      name.value.trim() === '' ||
-      email.value.trim() === '' ||
-      password.value.trim() === ''
-    ) {
-      return toast.error('Please fill in all fields');
+  const onFinish = values => {
+    const { name, email, password, confirm } = values;
+
+    if (password === confirm) {
+      dispatch(register({ name, email, password }));
     }
-    dispatch(
-      register({
-        name: name.value,
-        email: email.value,
-        password: password.value,
-      })
-    );
-    e.target.reset();
   };
 
+  const formItemLayout = {
+    labelCol: {
+      span: 24,
+    },
+    wrapperCol: {
+      span: 24,
+    },
+  };
+
+  const tailFormItemLayout = {
+    wrapperCol: {
+      xs: {
+        span: 24,
+        offset: 0,
+      },
+      sm: {
+        span: 16,
+        offset: 4,
+      },
+    },
+  };
   return (
-    <Form onSubmit={handleSubmit} autoComplete="off">
-      <Text>User</Text>
-      <Input type="text" name="name" placeholder="Enter name" />
-      <Text>Email</Text>
-      <Input type="email" name="email" placeholder="Enter email" />
-      <Text>Password</Text>
-      <Input type="password" name="password" placeholder="Enter password" />
-      <Button type="submit">Register</Button>
+    <Form
+      {...formItemLayout}
+      form={form}
+      name="register"
+      onFinish={onFinish}
+      initialValues={{
+        residence: ['zhejiang', 'hangzhou', 'xihu'],
+        prefix: '86',
+      }}
+      style={{
+        width: 300,
+      }}
+      scrollToFirstError
+    >
+      <Form.Item
+        name="email"
+        label="E-mail"
+        rules={[
+          {
+            type: 'email',
+            message: 'The input is not valid E-mail!',
+          },
+          {
+            required: true,
+            message: 'Please input your E-mail!',
+          },
+        ]}
+      >
+        <Input />
+      </Form.Item>
+
+      <Form.Item
+        name="password"
+        label="Password"
+        rules={[
+          {
+            required: true,
+            message: 'Please input your password!',
+          },
+        ]}
+        hasFeedback
+      >
+        <Input.Password />
+      </Form.Item>
+
+      <Form.Item
+        name="confirm"
+        label="Confirm Password"
+        dependencies={['password']}
+        hasFeedback
+        rules={[
+          {
+            required: true,
+            message: 'Please confirm your password!',
+          },
+          ({ getFieldValue }) => ({
+            validator(_, value) {
+              if (!value || getFieldValue('password') === value) {
+                return Promise.resolve();
+              }
+              return Promise.reject(
+                new Error('The new password that you entered do not match!')
+              );
+            },
+          }),
+        ]}
+      >
+        <Input.Password />
+      </Form.Item>
+
+      <Form.Item
+        name="name"
+        label="Name"
+        tooltip="What do you want others to call you?"
+        rules={[
+          {
+            required: true,
+            message: 'Please input your name!',
+            whitespace: true,
+          },
+        ]}
+      >
+        <Input />
+      </Form.Item>
+      <Form.Item {...tailFormItemLayout}>
+        <Button type="primary" htmlType="submit">
+          Register
+        </Button>
+      </Form.Item>
     </Form>
   );
 };
