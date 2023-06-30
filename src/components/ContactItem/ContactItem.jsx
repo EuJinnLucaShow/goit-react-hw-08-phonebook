@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
 import { deleteContact, editContatc } from 'redux/operations';
-import { Modal, Input, Button } from 'antd';
+import { Modal, Input, Button, message, Popconfirm } from 'antd';
 import { ReactComponent as AddIcon } from '../icons/minus-user.svg';
 import { ReactComponent as EditIcon } from '../icons/edit-profile.svg';
 import {
@@ -18,6 +18,15 @@ function ContactItem({ contact }) {
   const [showModal, setShowModal] = useState(false);
   const [newName, setNewName] = useState(contact.name);
   const [newNumber, setNewNumber] = useState(contact.number);
+
+  const confirm = e => {
+    handleDelete(e.target.value);
+    message.success('Click on Yes');
+  };
+  const cancel = e => {
+    console.log(e);
+    message.error('Click on No');
+  };
 
   const handleDelete = () => {
     dispatch(deleteContact(contact.id));
@@ -51,9 +60,18 @@ function ContactItem({ contact }) {
       <BtnEdit onClick={handleEdit}>
         <EditIcon />
       </BtnEdit>
-      <Btn onClick={handleDelete}>
-        <AddIcon />
-      </Btn>
+      <Popconfirm
+        title="Delete the contact"
+        description="Are you sure to delete this contact?"
+        onConfirm={confirm}
+        onCancel={cancel}
+        okText="Yes"
+        cancelText="No"
+      >
+        <Btn danger>
+          <AddIcon />
+        </Btn>
+      </Popconfirm>
 
       <Modal
         open={showModal}

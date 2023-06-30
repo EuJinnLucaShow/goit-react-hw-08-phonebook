@@ -1,5 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
+import { Empty } from 'antd';
 import {
   selectFilteredContacts,
   selectError,
@@ -25,7 +26,7 @@ function ContactList() {
       {isLoading && !error ? (
         <Loader />
       ) : filteredContacts.length === 0 && !error ? (
-        <p>The Phonebook is empty. Add your first contact. 🫤</p>
+        <Empty />
       ) : (
         filteredContacts.map(({ id, name, number }) => (
           <ContactItem key={id} contact={{ id, name, number }} />
