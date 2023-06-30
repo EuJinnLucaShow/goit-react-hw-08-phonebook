@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const ContactItems = styled.li`
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
   margin-bottom: 10px;
   background-color: #f5f6f7;
