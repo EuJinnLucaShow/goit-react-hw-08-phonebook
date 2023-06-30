@@ -5,6 +5,9 @@ export const ContactItems = styled.li`
   justify-content: space-between;
   align-items: center;
   margin-bottom: 10px;
+  background-color: #f5f6f7;
+  padding-left: 10px;
+  border-radius: 7px;
 `;
 
 export const ContactName = styled.span`
