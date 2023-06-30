@@ -15,12 +15,6 @@ export const Layout = () => {
         position="top-center"
         toastOptions={{
           duration: 4000,
-          // Custom Icon
-          icon: '🤬',
-          // Styling
-          style: {
-            color: '#000000',
-          },
         }}
       />
     </>

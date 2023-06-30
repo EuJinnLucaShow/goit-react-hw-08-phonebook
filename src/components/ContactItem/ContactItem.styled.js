@@ -18,7 +18,25 @@ export const ContactNumber = styled.span`
   /* margin-right: 20px; */
 `;
 
-export const Button = styled.button`
+export const Btn = styled.button`
+  > svg {
+    width: 30px;
+    height: 22px;
+  }
+  padding: 3px 10px 0 10px;
+  margin-left: 5px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: 1px solid;
+  :hover {
+    background-color: #e0e0e0;
+    > svg {
+      fill: #f50505;
+    }
+  }
+`;
+
+export const BtnEdit = styled.button`
   > svg {
     width: 30px;
     height: 22px;
@@ -31,7 +49,7 @@ export const Button = styled.button`
   :hover {
     background-color: #e0e0e0;
     > svg {
-      fill: #f50505;
+      fill: #051df5;
     }
   }
 `;
