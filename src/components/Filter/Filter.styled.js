@@ -1,8 +1,9 @@
 import styled from 'styled-components';
+import { Input } from 'antd';
 
-export const Input = styled.input`
+export const InputStyles = styled(Input)`
+  width: auto;
   padding: 5px;
-  /* margin-bottom: 10px; */
   border-radius: 6px;
   border: none;
   outline: 0;
