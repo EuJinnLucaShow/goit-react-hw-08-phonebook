@@ -23,6 +23,9 @@ export const ContactNumber = styled.a`
 `;
 
 export const Btn = styled.button`
+  @media only screen and (max-width: 600px) {
+    margin-right: 10px;
+  }
   > svg {
     width: 30px;
     height: 22px;
