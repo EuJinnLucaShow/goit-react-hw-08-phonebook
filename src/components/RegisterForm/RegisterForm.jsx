@@ -1,4 +1,4 @@
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 
 import { register } from 'redux/auth/auth-operations';
 import { Button, Form, Input } from 'antd';
@@ -6,12 +6,14 @@ import { Button, Form, Input } from 'antd';
 const RegisterForm = () => {
   const [form] = Form.useForm();
   const dispatch = useDispatch();
+  const { isLoading, error } = useSelector(state => state.auth);
 
   const onFinish = values => {
     const { name, email, password, confirm } = values;
 
     if (password === confirm) {
       dispatch(register({ name, email, password }));
+      !isLoading && !error && form.resetFields();
     }
   };
 
