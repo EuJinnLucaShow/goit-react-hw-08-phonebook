@@ -56,7 +56,9 @@ function ContactItem({ contact }) {
   return (
     <ContactItems>
       <ContactName>{contact.name}</ContactName>
-      <ContactNumber>{contact.number}</ContactNumber>
+      <ContactNumber href={`tel:${contact.number}`}>
+        {contact.number}
+      </ContactNumber>
       <BtnEdit onClick={handleEdit}>
         <EditIcon />
       </BtnEdit>
