@@ -25,7 +25,7 @@ const LoginForm = () => {
       name="normal_login"
       className="login-form"
       initialValues={{
-        remember: true,
+        remember: false,
       }}
       onFinish={onFinish}
     >
