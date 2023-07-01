@@ -20,6 +20,7 @@ export const Button = styled.button`
   > svg {
     width: 40px;
     height: 30px;
+    fill: #02ba52;
   }
   /* padding: 10px 20px; */
   margin-top: 5px;
@@ -27,9 +28,9 @@ export const Button = styled.button`
   border-radius: 6px;
   border: 1px solid;
   :hover {
-    background-color: #e0e0e0;
+    background-color: #1677ff;
     > svg {
-      fill: #00b02f;
+      fill: #fff;
     }
   }
 `;

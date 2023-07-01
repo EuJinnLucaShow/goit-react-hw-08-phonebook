@@ -18,15 +18,16 @@ export const Button = styled.button`
   > svg {
     width: 30px;
     height: 22px;
+    fill: #de7709;
   }
   padding: 3px 10px 0 10px;
   font-size: 14px;
   border-radius: 6px;
   border: 1px solid;
   :hover {
-    background-color: #e0e0e0;
+    background-color: #1677ff;
     > svg {
-      fill: #ff8c00;
+      fill: #fff;
     }
   }
 `;

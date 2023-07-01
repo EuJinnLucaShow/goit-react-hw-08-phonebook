@@ -22,6 +22,7 @@ export const Btn = styled.button`
   > svg {
     width: 30px;
     height: 22px;
+    fill: #f50505;
   }
   padding: 3px 10px 0 10px;
   margin-left: 5px;
@@ -29,9 +30,9 @@ export const Btn = styled.button`
   border-radius: 6px;
   border: 1px solid;
   :hover {
-    background-color: #e0e0e0;
+    background-color: #1677ff;
     > svg {
-      fill: #f50505;
+      fill: #fff;
     }
   }
 `;
@@ -40,6 +41,7 @@ export const BtnEdit = styled.button`
   > svg {
     width: 30px;
     height: 22px;
+    fill: #051df5;
   }
   padding: 3px 10px 0 10px;
   margin-left: 20px;
@@ -47,9 +49,9 @@ export const BtnEdit = styled.button`
   border-radius: 6px;
   border: 1px solid;
   :hover {
-    background-color: #e0e0e0;
+    background-color: #1677ff;
     > svg {
-      fill: #051df5;
+      fill: #fff;
     }
   }
 `;
